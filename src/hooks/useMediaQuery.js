@@ -1,0 +1,21 @@
+import { useState, useEffect } from 'react';
+
+export function useMediaQuery(query) {
+  const [matches, setMatches] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia(query).matches;
+  });
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    const update = () => setMatches(media.matches);
+    update();
+    media.addEventListener('change', update);
+    return () => media.removeEventListener('change', update);
+  }, [query]);
+
+  return matches;
+}
+
+/** True when viewport is tablet/desktop (sidebar layout). */
+export const DESKTOP_MEDIA = '(min-width: 768px)';
