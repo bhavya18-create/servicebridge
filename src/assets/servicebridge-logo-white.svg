@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" width="560" height="120">
+  <defs>
+    <linearGradient id="archGradW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93C5FD"/>
+      <stop offset="50%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="nodeGradW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#BFDBFE"/>
+    </linearGradient>
+    <linearGradient id="glowGradW" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlowW" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ========== ICON (WHITE VERSION) ========== -->
+  <g transform="translate(8, 12)">
+    <!-- Subtle glow -->
+    <ellipse cx="48" cy="58" rx="26" ry="10" fill="url(#glowGradW)"/>
+
+    <!-- Main bridge arch -->
+    <path d="M 12,68 Q 48,4 84,68" 
+          stroke="url(#archGradW)" stroke-width="4.5" fill="none" 
+          stroke-linecap="round"/>
+
+    <!-- Left pillar -->
+    <line x1="27" y1="49" x2="27" y2="78" 
+          stroke="#93C5FD" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Right pillar -->
+    <line x1="69" y1="49" x2="69" y2="78" 
+          stroke="#BFDBFE" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Base line -->
+    <line x1="18" y1="80" x2="78" y2="80" 
+          stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- AI neural connection lines -->
+    <line x1="48" y1="28" x2="27" y2="47" 
+          stroke="#93C5FD" stroke-width="1.2" opacity="0.4" stroke-linecap="round"/>
+    <line x1="48" y1="28" x2="69" y2="47" 
+          stroke="#93C5FD" stroke-width="1.2" opacity="0.4" stroke-linecap="round"/>
+    <line x1="27" y1="47" x2="69" y2="47" 
+          stroke="#93C5FD" stroke-width="0.8" opacity="0.25" stroke-linecap="round" 
+          stroke-dasharray="2.5,2.5"/>
+
+    <!-- Apex node (AI brain) -->
+    <circle cx="48" cy="26" r="5.5" fill="url(#nodeGradW)" filter="url(#softGlowW)"/>
+    <circle cx="48" cy="26" r="2.5" fill="white" opacity="0.6"/>
+
+    <!-- Left node -->
+    <circle cx="27" cy="47" r="3.8" fill="url(#nodeGradW)"/>
+    <circle cx="27" cy="47" r="1.7" fill="white" opacity="0.5"/>
+
+    <!-- Right node -->
+    <circle cx="69" cy="47" r="3.8" fill="url(#nodeGradW)"/>
+    <circle cx="69" cy="47" r="1.7" fill="white" opacity="0.5"/>
+
+    <!-- Small accent dots -->
+    <circle cx="37" cy="37" r="1.3" fill="#BFDBFE" opacity="0.5"/>
+    <circle cx="59" cy="37" r="1.3" fill="#BFDBFE" opacity="0.5"/>
+  </g>
+
+  <!-- ========== WORDMARK (WHITE) ========== -->
+  <text x="118" y="73" font-family="'Inter', 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="40" letter-spacing="0.5" fill="white">
+    <tspan font-weight="300">Service</tspan><tspan font-weight="700">Bridge</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="120" y="92" font-family="'Inter', 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" 
+        font-size="11" letter-spacing="3" fill="#93C5FD" opacity="0.7" font-weight="400">
+    AI-POWERED LOCAL SERVICES
+  </text>
+</svg>

@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import logoIcon from '../../assets/servicebridge-icon.svg';
 import { NAV_ITEMS } from '../../constants/navigation';
 import { cn } from '../../lib/cn';
 import { useSettings } from '../../contexts/SettingsContext';
@@ -27,9 +28,7 @@ export function AnimatedSidebar({
             collapsed && 'w-full justify-center',
           )}
         >
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-gradient shadow-glow">
-            <Sparkles className="h-5 w-5 text-white" />
-          </div>
+          <img src={logoIcon} alt="ServiceBridge" className="h-11 w-11 shrink-0 rounded-2xl" />
           <AnimatePresence mode="wait">
             {!collapsed && (
               <motion.div

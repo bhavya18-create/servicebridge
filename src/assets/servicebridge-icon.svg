@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="archGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1D51"/>
+      <stop offset="50%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Subtle glow under the arch -->
+  <ellipse cx="60" cy="68" rx="32" ry="12" fill="url(#glowGrad)"/>
+
+  <!-- Main bridge arch -->
+  <path d="M 16,78 Q 60,8 104,78" 
+        stroke="url(#archGrad)" stroke-width="5" fill="none" 
+        stroke-linecap="round"/>
+
+  <!-- Left pillar -->
+  <line x1="34" y1="58" x2="34" y2="88" 
+        stroke="#0F2B6E" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Right pillar -->
+  <line x1="86" y1="58" x2="86" y2="88" 
+        stroke="#1E40AF" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Base line -->
+  <line x1="24" y1="90" x2="96" y2="90" 
+        stroke="#0B1D51" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- AI neural connection lines -->
+  <line x1="60" y1="34" x2="34" y2="56" 
+        stroke="#3B82F6" stroke-width="1.3" opacity="0.35" stroke-linecap="round"/>
+  <line x1="60" y1="34" x2="86" y2="56" 
+        stroke="#3B82F6" stroke-width="1.3" opacity="0.35" stroke-linecap="round"/>
+  <line x1="34" y1="56" x2="86" y2="56" 
+        stroke="#3B82F6" stroke-width="1" opacity="0.2" stroke-linecap="round" 
+        stroke-dasharray="3,3"/>
+
+  <!-- Apex node (AI brain) -->
+  <circle cx="60" cy="32" r="6.5" fill="url(#nodeGrad)" filter="url(#softGlow)"/>
+  <circle cx="60" cy="32" r="3" fill="white" opacity="0.5"/>
+
+  <!-- Left node -->
+  <circle cx="34" cy="56" r="4.5" fill="url(#nodeGrad)"/>
+  <circle cx="34" cy="56" r="2" fill="white" opacity="0.4"/>
+
+  <!-- Right node -->
+  <circle cx="86" cy="56" r="4.5" fill="url(#nodeGrad)"/>
+  <circle cx="86" cy="56" r="2" fill="white" opacity="0.4"/>
+
+  <!-- Small accent dots (data flow) -->
+  <circle cx="47" cy="44" r="1.5" fill="#60A5FA" opacity="0.5"/>
+  <circle cx="73" cy="44" r="1.5" fill="#60A5FA" opacity="0.5"/>
+</svg>

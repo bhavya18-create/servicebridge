@@ -1,5 +1,6 @@
 import { createPortal } from 'react-dom';
-import { X, Sparkles } from 'lucide-react';
+import { X } from 'lucide-react';
+import logoIcon from '../../assets/servicebridge-icon.svg';
 import { NAV_ITEMS } from '../../constants/navigation';
 import { cn } from '../../lib/cn';
 import { useSettings } from '../../contexts/SettingsContext';
@@ -22,9 +23,7 @@ export function MobileNavDrawer({ open, activePage, onNavigate, onClose }) {
       >
         <div className="flex items-center justify-between gap-3 border-b border-glass-border px-4 py-5">
           <div className="flex min-w-0 items-center gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-gradient shadow-glow">
-              <Sparkles className="h-5 w-5 text-white" />
-            </div>
+            <img src={logoIcon} alt="ServiceBridge" className="h-11 w-11 shrink-0 rounded-2xl" />
             <div className="min-w-0">
               <h1 className="truncate font-display text-lg font-bold text-white">ServiceBridge</h1>
               <p className="truncate text-xs text-slate-500">AI Hyperlocal Platform</p>
