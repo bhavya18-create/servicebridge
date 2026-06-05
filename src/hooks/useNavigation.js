@@ -1,7 +1,8 @@
 import { useState, useCallback } from 'react';
 
 export function useNavigation({ onPageChange } = {}) {
-  const [activePage, setActivePage] = useState('Home');
+  // Default to About Page instead of Landing Page
+  const [activePage, setActivePage] = useState('About');
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 

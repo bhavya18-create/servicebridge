@@ -13,7 +13,7 @@ export function AIAssistantPage({
   onSend,
 }) {
   return (
-    <section>
+    <section className="mx-auto max-w-4xl px-4">
       <SectionHeader
         eyebrow="AI Assistant"
         title="Conversational smart assistance"
@@ -43,7 +43,7 @@ export function AIAssistantPage({
                 className={
                   message.role === 'user'
                     ? 'max-w-[85%] rounded-3xl bg-brand-gradient px-5 py-3.5 text-sm text-white shadow-glow sm:max-w-xs'
-                    : 'max-w-[85%] rounded-3xl border border-glass-border bg-white/[0.06] px-5 py-3.5 text-sm text-slate-200 sm:max-w-md'
+                    : 'max-w-[85%] rounded-3xl bg-gradient-to-r from-sky-600 via-blue-600 to-blue-700 px-5 py-3.5 text-sm text-white shadow-lg sm:max-w-md'
                 }
               >
                 {message.text}
@@ -52,8 +52,8 @@ export function AIAssistantPage({
           ))}
           {isBotTyping && (
             <div className="flex justify-start">
-              <div className="rounded-3xl border border-glass-border bg-white/[0.06] px-5 py-4">
-                <p className="mb-2 text-xs text-slate-500">AI is thinking</p>
+              <div className="rounded-3xl bg-gradient-to-r from-sky-600/30 to-blue-700/30 border border-blue-500/20 px-5 py-4">
+                <p className="mb-2 text-xs text-slate-300">AI is thinking</p>
                 <div className="flex items-center gap-1.5">
                   {[0, 1, 2].map((i) => (
                     <span
@@ -67,7 +67,7 @@ export function AIAssistantPage({
             </div>
           )}
         </div>
-        <div className="flex items-center gap-3 border-t border-glass-border bg-slate-950/40 p-5 backdrop-blur-xl">
+        <div className="flex items-center gap-3 border-t border-glass-border bg-white dark:bg-[#1a1a1a] p-5">
           <input
             ref={chatInputRef}
             type="text"
@@ -77,7 +77,7 @@ export function AIAssistantPage({
               if (e.key === 'Enter') onSend();
             }}
             placeholder="Type your message…"
-            className="glass-input flex-1"
+            className="input flex-1"
           />
           <Button onClick={onSend}>Send</Button>
         </div>

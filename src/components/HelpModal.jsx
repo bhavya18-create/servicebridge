@@ -69,98 +69,98 @@ export function HelpModal() {
   if (!helpOpen) return null;
 
   return createPortal(
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 px-4 py-6 text-slate-100">
-      <div className="mx-auto w-full max-w-3xl overflow-hidden rounded-[32px] border border-white/10 bg-slate-950/95 shadow-2xl">
-        <div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm px-4 py-6 text-slate-800">
+      <div className="mx-auto w-full max-w-3xl max-h-[90vh] overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-2xl animate-in fade-in zoom-in-95 duration-200 flex flex-col">
+        <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50/50 px-6 py-5 flex-shrink-0">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-slate-400">{t('app.helpTitle')}</p>
-            <h2 className="mt-2 text-2xl font-semibold text-white">{t('app.helpSubtitle')}</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-slate-500 font-semibold">{t('app.helpTitle')}</p>
+            <h2 className="mt-2 text-2xl font-semibold text-slate-900">{t('app.helpSubtitle')}</h2>
           </div>
           <button
             type="button"
             aria-label={t('app.close')}
             onClick={closeHelp}
-            className="rounded-2xl border border-white/10 bg-slate-900/80 p-3 text-slate-300 transition hover:bg-slate-900"
+            className="rounded-2xl border border-slate-200 bg-white p-3 text-slate-500 transition hover:bg-slate-100 hover:text-slate-900 shadow-sm flex-shrink-0"
           >
             <X className="h-5 w-5" />
           </button>
         </div>
-        <div className="grid gap-6 px-6 py-6 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="grid gap-6 px-6 py-6 lg:grid-cols-[1.05fr_0.95fr] overflow-y-auto">
           <section className="space-y-4">
-            <h3 className="text-xl font-semibold text-white">{t('app.faqTitle')}</h3>
+            <h3 className="text-xl font-semibold text-slate-900">{t('app.faqTitle')}</h3>
             <div className="space-y-3">
               {faqs.map((item) => (
-                <div key={item.question} className="rounded-3xl border border-white/10 bg-white/5 p-4">
-                  <p className="font-semibold text-white">{item.question}</p>
-                  <p className="mt-2 text-sm leading-6 text-slate-300">{item.answer}</p>
+                <div key={item.question} className="rounded-3xl border border-slate-200 bg-slate-50/80 p-4 transition-all hover:bg-slate-100/50 hover:border-slate-300">
+                  <p className="font-semibold text-slate-800">{item.question}</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{item.answer}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section className="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-5">
+          <section className="space-y-4 rounded-3xl border border-slate-200 bg-slate-50/50 p-5">
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-400">{t('app.contactTitle')}</p>
-              <h3 className="mt-2 text-xl font-semibold text-white">{t('app.contactDescription')}</h3>
+              <p className="text-sm uppercase tracking-[0.3em] text-slate-500 font-semibold">{t('app.contactTitle')}</p>
+              <h3 className="mt-2 text-xl font-semibold text-slate-900">{t('app.contactDescription')}</h3>
             </div>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="text-sm text-slate-300">
+                <label className="text-sm font-medium text-slate-700">
                   {t('help.formName')}
                   <input
                     value={form.name}
                     onChange={(event) => handleChange('name', event.target.value)}
-                    className="glass-input mt-2 w-full"
+                    className="input mt-2 w-full"
                     placeholder={t('help.formName')}
                   />
                 </label>
-                {errors.name && <p className="mt-2 text-sm text-rose-400">{errors.name}</p>}
+                {errors.name && <p className="mt-2 text-sm font-medium text-rose-600">{errors.name}</p>}
               </div>
               <div>
-                <label className="text-sm text-slate-300">
+                <label className="text-sm font-medium text-slate-700">
                   {t('help.formEmail')}
                   <input
                     type="email"
                     value={form.email}
                     onChange={(event) => handleChange('email', event.target.value)}
-                    className="glass-input mt-2 w-full"
+                    className="input mt-2 w-full"
                     placeholder={t('help.formEmail')}
                   />
                 </label>
-                {errors.email && <p className="mt-2 text-sm text-rose-400">{errors.email}</p>}
+                {errors.email && <p className="mt-2 text-sm font-medium text-rose-600">{errors.email}</p>}
               </div>
               <div>
-                <label className="text-sm text-slate-300">
+                <label className="text-sm font-medium text-slate-700">
                   {t('help.formPhone')}
                   <input
                     type="tel"
                     value={form.phone}
                     onChange={(event) => handleChange('phone', event.target.value)}
-                    className="glass-input mt-2 w-full"
+                    className="input mt-2 w-full"
                     placeholder={t('help.formPhone')}
                   />
                 </label>
               </div>
               <div>
-                <label className="text-sm text-slate-300">
+                <label className="text-sm font-medium text-slate-700">
                   {t('help.formMessage')}
                   <textarea
                     value={form.message}
                     onChange={(event) => handleChange('message', event.target.value)}
-                    className="glass-input mt-2 min-h-[120px] w-full resize-none"
+                    className="input mt-2 min-h-[120px] w-full resize-none !rounded-3xl"
                     placeholder={t('help.formMessage')}
                   />
                 </label>
-                {errors.message && <p className="mt-2 text-sm text-rose-400">{errors.message}</p>}
+                {errors.message && <p className="mt-2 text-sm font-medium text-rose-600">{errors.message}</p>}
               </div>
               <button type="submit" className="btn-brand w-full">{t('app.submit')}</button>
               {status === 'success' && (
-                <p className="rounded-2xl bg-emerald-500/10 px-4 py-3 text-sm text-emerald-300">
+                <p className="rounded-2xl bg-emerald-50 border border-emerald-200 px-4 py-3 text-sm text-emerald-700 font-medium">
                   {t('app.successMessage')}
                 </p>
               )}
               {status === 'error' && (
-                <p className="rounded-2xl bg-rose-500/10 px-4 py-3 text-sm text-rose-300">
+                <p className="rounded-2xl bg-rose-50 border border-rose-200 px-4 py-3 text-sm text-rose-700 font-medium">
                   {t('app.errorMessage')}
                 </p>
               )}

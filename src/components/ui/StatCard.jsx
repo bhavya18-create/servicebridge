@@ -6,8 +6,8 @@ const CountUp = CountUpLib?.default || CountUpLib;
 export function StatCard({ title, value, suffix }) {
   return (
     <GlassCard hover className="group">
-      <p className="text-sm font-medium text-slate-400">{title}</p>
-      <h3 className="mt-3 font-display text-4xl font-bold tracking-tight text-white">
+      <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">{title}</p>
+      <h3 className="mt-3 font-display text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
         <CountUp end={value} duration={2} />
         {suffix}
       </h3>

@@ -13,7 +13,7 @@ export const NAV_ITEMS = [
   { id: 'Providers', labelKey: 'nav.Providers', icon: Users },
   { id: 'AI Assistant', labelKey: 'nav.AI Assistant', icon: Brain },
   { id: 'Emergency', labelKey: 'nav.Emergency', icon: AlertTriangle },
-  { id: 'Dashboard', labelKey: 'nav.Dashboard', icon: BarChart3 },
+  { id: 'Profile', labelKey: 'nav.Profile', icon: BarChart3 },
 ];
 
 export const PAGE_HEADINGS = {
@@ -22,6 +22,6 @@ export const PAGE_HEADINGS = {
   Providers: 'pageHeadings.Providers',
   'AI Assistant': 'pageHeadings.AI Assistant',
   Emergency: 'pageHeadings.Emergency',
-  Dashboard: 'pageHeadings.Dashboard',
+  Profile: 'pageHeadings.Profile',
   'Sign In': 'pageHeadings.Sign In',
 };

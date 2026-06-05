@@ -20,7 +20,7 @@ export function SectionHeader({
         {eyebrow && <p className="eyebrow">{eyebrow}</p>}
         {title && <h2 className={cn('page-title', eyebrow && 'mt-3')}>{title}</h2>}
         {description && (
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-400">{description}</p>
+          <p className="mt-4 max-w-2xl section-copy">{description}</p>
         )}
       </div>
       {actions && <div className="flex flex-wrap gap-3">{actions}</div>}

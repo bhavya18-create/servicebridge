@@ -1,14 +1,16 @@
 import { cn } from '../../lib/cn';
 
 const variants = {
-  brand: 'btn-brand',
+  primary: 'btn-primary',
+  secondary: 'btn-secondary',
+  outline: 'btn-outline',
   ghost: 'btn-ghost',
-  danger: 'inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-rose-600 to-orange-500 px-6 py-3 font-semibold text-white shadow-lg transition-transform hover:scale-[1.02]',
+  danger: 'btn-danger',
 };
 
-export function Button({ variant = 'brand', className, children, ...props }) {
+export function Button({ variant = 'primary', className, children, ...props }) {
   return (
-    <button type="button" className={cn(variants[variant], className)} {...props}>
+    <button type="button" className={cn('btn', variants[variant], className)} {...props}>
       {children}
     </button>
   );

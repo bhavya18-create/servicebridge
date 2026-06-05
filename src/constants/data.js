@@ -1,4 +1,4 @@
-import { Zap, Wrench, Brain, ShieldCheck, Sparkles } from 'lucide-react';
+import { Zap, Wrench, Brain, ShieldCheck, Sparkles, Camera, Laptop, Stethoscope, Snowflake, Hammer } from 'lucide-react';
 
 export const categories = [
   'Electrician',
@@ -9,6 +9,8 @@ export const categories = [
   'Cleaning',
   'Laptop Repair',
   'Healthcare',
+  'AC Specialist',
+  'Carpenter',
 ];
 
 export const categoryIcons = {
@@ -16,6 +18,12 @@ export const categoryIcons = {
   Plumber: Wrench,
   Tutor: Brain,
   Mechanic: ShieldCheck,
+  Photographer: Camera,
+  Cleaning: Sparkles,
+  'Laptop Repair': Laptop,
+  Healthcare: Stethoscope,
+  'AC Specialist': Snowflake,
+  Carpenter: Hammer,
   default: Sparkles,
 };
 
@@ -24,14 +32,14 @@ export const providers = [
   { name: 'Priya Singh', role: 'Plumber', rating: 4.8, eta: '18 mins', price: '₹360' },
   { name: 'Amit Patel', role: 'Mechanic', rating: 4.7, eta: '22 mins', price: '₹520' },
   { name: 'Nisha Verma', role: 'AC Specialist', rating: 4.9, eta: '15 mins', price: '₹680' },
-  { name: 'Sahil Rao', role: 'Home Cleaner', rating: 4.8, eta: '14 mins', price: '₹340' },
+  { name: 'Sahil Rao', role: 'Cleaning', rating: 4.8, eta: '14 mins', price: '₹340' },
   { name: 'Manish Gupta', role: 'Carpenter', rating: 4.7, eta: '19 mins', price: '₹390' },
-  { name: 'Ayesha Khan', role: 'Painter', rating: 4.8, eta: '21 mins', price: '₹450' },
-  { name: 'Vikram Desai', role: 'Gardener', rating: 4.6, eta: '17 mins', price: '₹320' },
-  { name: 'Kavita Joshi', role: 'Appliance Repair', rating: 4.9, eta: '13 mins', price: '₹500' },
-  { name: 'Rohan Mehta', role: 'Security Tech', rating: 4.7, eta: '20 mins', price: '₹560' },
-  { name: 'Priyanka Nair', role: 'Pool Cleaner', rating: 4.6, eta: '16 mins', price: '₹370' },
-  { name: 'Sandeep Kumar', role: 'Pest Control', rating: 4.8, eta: '18 mins', price: '₹410' },
+  { name: 'Ayesha Khan', role: 'Photographer', rating: 4.8, eta: '21 mins', price: '₹450' },
+  { name: 'Vikram Desai', role: 'Tutor', rating: 4.6, eta: '17 mins', price: '₹320' },
+  { name: 'Kavita Joshi', role: 'Healthcare', rating: 4.9, eta: '13 mins', price: '₹500' },
+  { name: 'Rohan Mehta', role: 'Laptop Repair', rating: 4.7, eta: '20 mins', price: '₹560' },
+  { name: 'Priyanka Nair', role: 'Cleaning', rating: 4.6, eta: '16 mins', price: '₹370' },
+  { name: 'Sandeep Kumar', role: 'Plumber', rating: 4.8, eta: '18 mins', price: '₹410' },
 ];
 
 export const analyticsData = [

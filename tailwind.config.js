@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
@@ -51,6 +52,38 @@ export default {
         brand: {
           from: '#3b82f6',
           to: '#8b5cf6',
+        },
+        // Extended slate shades (intermediate values not in the default palette)
+        slate: {
+          105: '#eff3f8',
+          150: '#e8eef4',
+          205: '#e0e6ef',
+          250: '#d9e1eb',
+          350: '#aebccc',
+          450: '#7c8fa2',
+          505: '#637282',
+          550: '#556070',
+          650: '#3d4b5f',
+          655: '#3c4a5d',
+          750: '#293545',
+          850: '#152030',
+          905: '#0d1625',
+          955: '#01050f',
+        },
+        // Extended red shades
+        red: {
+          650: '#c82020',
+        },
+        // Extended rose shades
+        rose: {
+          450: '#f85672',
+          505: '#f33d5d',
+          605: '#df1d47',
+          650: '#cf1744',
+        },
+        // Extended indigo shades
+        indigo: {
+          650: '#4840d8',
         },
       },
       backgroundImage: {
